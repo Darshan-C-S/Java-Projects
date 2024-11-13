@@ -4,6 +4,7 @@ package com.example.SpringRedisDemo.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import net.minidev.json.annotate.JsonIgnore;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
@@ -19,4 +20,7 @@ public class Product implements Serializable {
     private String name;
     private int qty;
     private long price;
+
+    @JsonIgnore
+    private Product relatedProduct; // Example of a field that might cause recursion
 }
