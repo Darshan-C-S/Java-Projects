@@ -18,7 +18,7 @@ public class SortingAlgo {
 //    }
 
    public static int[] bubbleSort(int nums[] , int size){
-       for(int i = 0 ;  i< size -1 ; i++){
+       for(int i = 0 ;  i< size -1 ; i++){ // 1,3,4,6,2,7
            for(int j = 0 ; j<size-i-1; j++){
                if(nums[j]>nums[j+1]){
                    int temp = nums[j];

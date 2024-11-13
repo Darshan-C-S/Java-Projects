@@ -64,6 +64,26 @@ private int size;
         currentNode.next = newNode;
     }
 
+    public void addPosK(String data , int K){
+      Node newNode = new Node(data);
+
+      if(head == null){
+          head = newNode;
+          return;
+      }
+
+      Node currentNode = head;
+
+        for (int i = 1; i < K-1; i++) {
+            if(currentNode.next != null){
+                currentNode = currentNode.next;
+            }
+        }
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+
+    }
+
     public void printList(){
 
         if(head == null){
@@ -178,6 +198,9 @@ private int size;
         list.printList();
 
         list.addFirst("This");
+        list.printList();
+
+        list.addPosK("Hello", 3);
         list.printList();
 
         list.deleteFirst();

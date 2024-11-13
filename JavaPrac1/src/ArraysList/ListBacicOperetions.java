@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListBacicOperetions {
     public static void main(String[] args) {
@@ -20,6 +21,8 @@ public class ListBacicOperetions {
 
         List<Integer> li = Arrays.asList(1,2,3,4);
         System.out.println(li);
+
+
 
 //        To get the elements of the list from position
         System.out.println(li.get(1));
@@ -49,6 +52,7 @@ public class ListBacicOperetions {
         Iterator<Integer> it = li.listIterator();
         while (it.hasNext()){
             System.out.println(it.next());
+
         }
 
 //      To check if the element is in list

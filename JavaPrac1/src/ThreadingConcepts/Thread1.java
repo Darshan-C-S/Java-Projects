@@ -9,8 +9,7 @@ public class Thread1 {
 
        for (int i=1; i<=5; i++ ) {
            // i is having the thread no
-           MultiThreadThing multiThreadThing = new MultiThreadThing(i);
-           Thread multhreadRun = new Thread(multiThreadThing);
+           Thread multhreadRun = new Thread(new MultiThreadThing(i));
            multhreadRun.start();
 
            try {

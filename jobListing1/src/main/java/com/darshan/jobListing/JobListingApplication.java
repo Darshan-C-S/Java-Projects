@@ -1,6 +1,8 @@
 package com.darshan.jobListing;
 
 import com.darshan.jobListing.bean.container.Student;
+import com.darshan.jobListing.model.Post;
+import com.darshan.jobListing.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.Banner;
@@ -61,7 +63,10 @@ public class JobListingApplication {
 		Student bean = context.getBean(Student.class);
 
 
+
+
 		logger.info("The bean from application context : "+ bean);
+
 
 
 	}

@@ -26,10 +26,10 @@ public class SearchingAlgo {
         int mid = low +(high - low)/2;//123456789
 
        if(low <= high){
-           if(target == nums[mid]){
+           if( nums[mid] == target){
                return mid;
            }
-       } else if (target > nums[mid]) {
+       } else if (nums[mid]> target) {
            return BinaryRecursivSearch(nums, mid + 1, high, target);
        } else {
            return BinaryRecursivSearch(nums, low, mid - 1, target);

@@ -25,7 +25,7 @@ public class CompletebleFeatureEx {
             for (char i = 'a'; i <'k' ; i++) {
                 System.out.println(i);
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(500);
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
@@ -41,6 +41,13 @@ public class CompletebleFeatureEx {
             Thread.currentThread().interrupt();
         }
         System.out.println("Both tasks are done in all of : !");
+
+
+// Chaining multiple async operetions
+        CompletableFuture<Integer> future12 = CompletableFuture.supplyAsync( () -> 10).
+                thenApplyAsync(result -> result * 2).thenApplyAsync(result -> result +10);
+
+        future12.thenAccept(res -> System.out.println("Result of Chaining Multiple async operations : "+res));
 
 
 

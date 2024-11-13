@@ -24,6 +24,8 @@ public class PostController {
 
 
 
+
+
     // this method is used to redirect the home url http://localhost:8082/ to the corresponding swagger url
 
 
@@ -47,6 +49,7 @@ public class PostController {
     public Post addPost(@RequestBody Post post){
         return repo.save(post);
     }
+
 
     @PutMapping("/update")
     public Post UpdatePost(@RequestBody Post post){
@@ -85,7 +88,10 @@ public class PostController {
     }
 
     /*This is the example of the inter microservice communication where i can use rest endpoint from different
-     *   controller class or Microservice */
+     *   controller class or Microservice
+     *
+     * getForobject has the url and return type
+     *  */
 
     @Value("${service.URL}")
     String ServivceURL ;

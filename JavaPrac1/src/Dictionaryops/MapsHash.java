@@ -8,7 +8,7 @@ public class MapsHash {
            which means that retrieval and insertion of elements
            are very fast, usually O(1) time complexity.
 
-           HashMaps allow for one null values and many null keys
+           HashMaps allows any of its values to be null , as well as one of its keys
 
            HashMaps allow for duplicate values, but not duplicate keys.
 
@@ -39,6 +39,7 @@ public class MapsHash {
 
         //traverse through hash map
         studentDetails.forEach((key,value) -> System.out.println("Key : " +key+ " value : "+value));
+        studentDetails.forEach((k,v)-> {if(k > 2) System.out.println("The values above 2 are : "+ v);});
 
 
     }

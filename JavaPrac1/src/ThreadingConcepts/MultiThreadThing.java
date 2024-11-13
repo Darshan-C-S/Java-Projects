@@ -5,7 +5,7 @@ package ThreadingConcepts;
 //public class MultiThreadThing extends Thread{
 
 /*
-* Always prifer to implement runnable interface over extending thread class as i will allow multiple inheritance
+* Always prifer to implement runnable interface over extending thread class as it will allow multiple inheritance
 * on the MultiThreadThing class
 * */
 public class MultiThreadThing implements Runnable {

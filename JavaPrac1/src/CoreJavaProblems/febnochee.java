@@ -27,6 +27,7 @@ public class febnochee {
         if(n<=1){
             return n;
         }
+        if (n==2) return 2;
         return febrec(n-1) + febrec(n-2);
 
     }

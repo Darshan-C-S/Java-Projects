@@ -32,7 +32,7 @@ public class CountFreq {
     }
     public static void main(String[] args) {
 
-        int arr[] = new int[]{ 10, 20, 20, 10, 10, 20, 5, 20 };
+        int arr[] = { 10, 20, 20, 10, 10, 20, 5, 20 };
         int n = arr.length;
 
         System.out.println("From Map : ");
