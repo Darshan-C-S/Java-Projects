@@ -4,6 +4,8 @@ import io.lettuce.core.RedisURI;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheConfiguration;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConfiguration;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -16,6 +18,8 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.net.URI;
+import java.time.Duration;
+
 @Configuration
 public class RedisConfig {
 
@@ -28,6 +32,7 @@ public class RedisConfig {
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
         // Parse the Redis URL
+
         URI uri = URI.create(redisUrl);
         String[] userInfo = uri.getUserInfo().split(":");
         String username = userInfo[0];
@@ -65,6 +70,15 @@ public class RedisConfig {
         template.setHashValueSerializer(new GenericJackson2JsonRedisSerializer());
 
         return template;
+    }
+
+    @Bean
+    public RedisCacheManager cacheManager(LettuceConnectionFactory redisConnectionFactory) {
+
+        return RedisCacheManager.builder(redisConnectionFactory).
+                cacheDefaults(RedisCacheConfiguration.defaultCacheConfig().entryTtl(Duration.ofMinutes(2))
+                        .disableCachingNullValues()).transactionAware().build();
+
     }
 
 }

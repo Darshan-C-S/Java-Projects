@@ -29,8 +29,8 @@ public class House {
         private String foundation;
         private String structure;
         private String roof;
-
         private boolean swimmingPool;
+
 
         //        when we build a logic that supports chaining, we are returning this
         public Builder setFoundation(String foundation) {

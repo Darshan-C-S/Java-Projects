@@ -15,7 +15,13 @@ public class SetsImpl {
     for(String name : names){
         System.out.println(name); //looping in for as well as lambda expression
     }
+
       names.forEach(System.out::println);
+    List<String> ls =names.stream().toList();
+        System.out.println("////////////////////");
+   ls.forEach(System.out::println);
+
+
       List<Integer> numberlist = new ArrayList<>();
       numberlist.add(1);
         numberlist.add(2);

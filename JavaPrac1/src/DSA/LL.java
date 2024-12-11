@@ -39,7 +39,8 @@ private int size;
             head = newNode;
             return;
         }
-        newNode.next = head;
+
+        newNode.next  = head;
         head = newNode;
     }
 //    add last
@@ -55,13 +56,16 @@ private int size;
 * Later check if the next node is null if not shift to next node and continue the operation
 * until you get null value i.e. when we get last node
 * */
+
         Node currentNode = head;
         while (currentNode.next != null){
             currentNode = currentNode.next;
         }
+
 //        When we get currentNode.next node as null i..e when we get the last node
-//        we will make currentNode.next equals to new node whi
+//        we will make currentNode.next equals to new node
         currentNode.next = newNode;
+
     }
 
     public void addPosK(String data , int K){
@@ -72,15 +76,15 @@ private int size;
           return;
       }
 
-      Node currentNode = head;
-
-        for (int i = 1; i < K-1; i++) {
+     Node currentNode = head;
+        for (int i = 0; i < K - 1; i++) {
             if(currentNode.next != null){
                 currentNode = currentNode.next;
             }
         }
         newNode.next = currentNode.next;
         currentNode.next = newNode;
+
 
     }
 
@@ -121,20 +125,22 @@ private int size;
      size --;
 //     Initially check if the head is null if so we print list is empty
 //     If we have single head node then we delete it by making it null
-     if(head.next == null){
-         head = null;
-     }
+    if(head.next == null){
+        head = null;
+    }
 // Create two pointer nodes secondLastNode and lastNode pointing to head and head.next
 // travers both the pointer forward until getting lastNode.next == 0
 // lastNode.next == 0 means lastNode is having last value and secondLastNode.next is pointing to it
 //  make secondLastNode.next null which deletes the value of lastNode and make secondLastNode the new lastNode
-     Node secondLastNode = head;
-     Node lastNode = head.next;
-     while (lastNode.next != null){
-         lastNode = lastNode.next;
-         secondLastNode = secondLastNode.next;
-     }
-     secondLastNode.next = null;
+    Node LastNode = head.next;
+    Node secondLastNode = head;
+    while (LastNode.next != null){
+        LastNode = LastNode.next;
+        secondLastNode = secondLastNode.next;
+    }
+    secondLastNode.next = null;
+
+
  }
 
  public void reverse(){
@@ -145,13 +151,13 @@ private int size;
       Node current = head;
       Node next = null;
 
-      while(current != null){
-          next = current.next;
-          current.next = previos;
-          previos = current;
-          current= next ;
-      }
-      head = previos;
+     while (current != null){
+         next = current.next;
+         current.next = previos;
+         previos = current;
+         current = next;
+     }
+     head = previos;
 
  }
 

@@ -12,6 +12,10 @@ public class ReverseArray {
         String [] b = new String[arr.length];
         int j = arr.length;
 
+       /* Using Collection Frame work */
+//        Collections.reverse(Arrays.asList(arr));
+//        Arrays.stream(arr).forEach(System.out::println);
+
         for (int i = 0; i < arr.length; i++) {
             b[j-1] = arr[i];
             j-=1;

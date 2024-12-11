@@ -15,5 +15,11 @@ public class Prototype {
         circle.drow();
         clonedCircle.drow();
 
+        Shape  square = new Square(8);
+        Shape clonedSquare = square.clone();
+
+        square.drow();
+        clonedSquare.drow();
+
     }
 }

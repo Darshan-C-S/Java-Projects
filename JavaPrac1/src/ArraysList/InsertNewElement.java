@@ -2,7 +2,7 @@ package ArraysList;
 
 import java.util.Arrays;
 
-public class InsertNewElemnt {
+public class InsertNewElement {
 
     public static void insertEleArray(int [] arr , int ele , int pos){
 

@@ -26,11 +26,33 @@ public class TwoSum1 {
         throw new IllegalArgumentException("No two sum solution");
     }
 
+    public static int[] twoSum2(int[]arr , int tar){
+
+        Map<Integer,Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            int diff= tar - arr[i];
+
+            if(map.containsKey(diff)){
+                return new int[]{map.get(diff),i };
+            }
+            map.put(arr[i] , i);
+        }
+        throw new IllegalArgumentException("No two sum 2");
+
+    }
+
+
+
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int target = 18;
         TwoSum1 solution = new TwoSum1();
         int[] result = solution.twoSum(nums, target);
         System.out.println("Indices: " + result[0] + ", " + result[1]);
+
+        int[] res2 = twoSum2(nums , target);
+        System.out.println("The solution for twosum2 and there indices are: "+ res2[0] +" and "+ res2[1]);
+
     }
 }

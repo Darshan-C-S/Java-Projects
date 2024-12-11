@@ -38,8 +38,15 @@ interface Multiply3No{
 interface calculate{
     void calculateNo(int a , int b);
 }
+
+
 public class interfacetut1 {
     public static void main(String[] args) {
+
+
+        calculate ca = (int a , int b)->{
+            System.out.println("The sum of the no is : "+ (a+b));
+        };
 
 
         B b = () -> {
@@ -65,9 +72,10 @@ public class interfacetut1 {
 
 
       calculate mul = (x,y) ->{
-          System.out.println(x*y);
+          System.out.println("The multiplication of two no is :  "+(x*y));
       };
       mul.calculateNo(2,4);
+      ca.calculateNo(2,4);
 
       // Lambdas in list using streams
         List<Integer> arr = Arrays.asList(1,2,3,4,5,6);

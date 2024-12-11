@@ -13,6 +13,13 @@ public class StreamMapExample {
         map.put("cherry", 7);
         map.put("date", 2);
 
+        int maxVal = map.values().stream().sorted().collect(Collectors.toList()).get(map.values().size() -1);
+
+        Map<String,Integer> maxmap = map.entrySet().stream().filter(entry -> entry.getValue().equals(maxVal)).
+                collect(Collectors.toMap(Map.Entry::getKey , Map.Entry::getValue));
+
+        System.out.println("The max entry of the map : "+ maxmap);
+
         Map<String,Integer> filteredMap = map.entrySet().stream().filter(entry -> entry.getValue()>2 ).
                 collect(Collectors.toMap(x->x.getKey(),y->y.getValue()));
         System.out.println("Value filtered above 2 : ");

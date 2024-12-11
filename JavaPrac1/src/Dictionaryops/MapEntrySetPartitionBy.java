@@ -29,6 +29,7 @@ public class MapEntrySetPartitionBy {
 
         /*      Perform Partition by operation to filter out the key whose lent is >= 6    */
         Map<Boolean , List<Map.Entry<String,String>>> pmp  = map2.entrySet().stream().collect(Collectors.partitioningBy(x->x.getKey().length() >= 6));
+        System.out.println("Partitioned Map : "+pmp);
 
         System.out.println("Required Length : ");
         List requiredLength = pmp.get(true);

@@ -45,7 +45,7 @@ public class ListOfClassObjects {
         people.add(new Person("Charlie", 35));
         people.add(new Person("David", 28));
 
-//        Itterate Through the list
+//       Iterate Through the list
 
         System.out.println("====== list Iteration ======");
         for(Person p : people){
@@ -56,6 +56,12 @@ public class ListOfClassObjects {
         List<Person> ageLimit = people.stream().filter(x->x.getAge() < 28).collect(Collectors.toList());
         System.out.println("People whose age is less than 28: "+ageLimit);
 
+
+//        To Filter above age of 20
+        List<Person>aboveTo = people.stream().filter(p->p.getAge() > 20).collect(Collectors.toList());
+        List<Person>filterAdv = people.stream().filter(p -> p.getName().startsWith("A")).collect(Collectors.toList());
+        System.out.println("People above the age of 20 is : "+ aboveTo + " and name starts with A"+ filterAdv);
+
 //        Sort the people by age
         List<Person> PersonByAge = people.stream().sorted((p1,p2)-> Integer.compare(p1.getAge(),p2.getAge())).collect(Collectors.toList());
         System.out.println("List after Sorting the people by age : "+ PersonByAge);
@@ -63,6 +69,7 @@ public class ListOfClassObjects {
 //        Sort the peaople by name
         List<Person> SortByName = people.stream().sorted((p1,p2) -> p1.getName().compareTo(p2.getName())).collect(Collectors.toList());
         System.out.println("List after Sorting the people by first letter of the name : "+ SortByName);
+
 
 
         Long CountPeopleBetween22and25 = people.stream().filter(x -> 22 <= x.getAge() && x.getAge() <=25).count();

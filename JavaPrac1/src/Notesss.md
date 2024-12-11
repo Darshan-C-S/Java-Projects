@@ -179,7 +179,7 @@ prior to that it was not allowed as all method was implicitly public abstract.
 
 ### Constructor an types :
 https://www.shiksha.com/online-courses/articles/types-of-constructors-in-java-blogId-166027
-
+https://chatgpt.com/c/a503faaa-966f-41f4-9b5f-e54fd3a7f388
 
 
 ### Method hiding in java:
@@ -550,3 +550,8 @@ mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8080"
 - You can also specify profiles and external configuration files for flexibility.
 
 Feel free to ask if you have any specific scenarios or further questions!
+
+
+# JUNIT
+### Chat GPT :
+https://chatgpt.com/c/6758254e-d074-8004-9285-d1a38cdc9392
