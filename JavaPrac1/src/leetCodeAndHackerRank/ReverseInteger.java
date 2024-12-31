@@ -3,25 +3,26 @@ package leetCodeAndHackerRank;
 public class ReverseInteger {
 
     public static int reverse(int x) {
-
-        String s = Integer.toString(x);
+        int res = 0;
         boolean nege = x<0;
-        StringBuilder sb = new StringBuilder(s);
 
-        String rev = sb.reverse().toString();
-        int ans = Integer.valueOf(rev).intValue();
+        String s = String.valueOf(Math.abs(x));
 
-        if (nege == true) {
-            return -ans;
+        StringBuffer sb = new StringBuffer(s).reverse();
+
+        try {
+            res = Integer.valueOf(sb.toString()).intValue();
+        }catch (NumberFormatException e){
+            return 0;
         }
-        return ans;
 
+        return nege ? -res : res;
 
 
     }
     public static void main(String[] args) {
 
-        int a = -123;
+        int a = 1534236469;
         System.out.println(reverse(a));
 
     }

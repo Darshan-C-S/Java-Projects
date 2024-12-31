@@ -1,56 +1,38 @@
 package Basics;
 
+import LambdasPrac.PrintTh;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class practice01 {
 
-    public static void maxSal( Map<String , Integer> map ){
 
-        List<Integer> val   = map.values().stream().toList();
 
-        int maxSal = val.stream().sorted().collect(Collectors.toList()).get(val.size()-1);
-
-        for (Map.Entry<String , Integer> ma  : map.entrySet() ) {
-                if(ma.equals(maxSal)){
-                    System.out.println();
-                }
-        }
-    }
     public static void main(String[] args) {
-        Map<String , Integer> map = new HashMap<>();
 
+        List<String> names = Arrays.asList("data", "analyze", "add","edit");
 
-        map.put("Darshan", 200000);
-        map.put("Jhon" , 100000);
-        map.put("Megha", 300000);
-        map.put("Bill" , 50000);
-        map.put("Warres", 40000);
-        map.put("AAA" , 355000000);
+        List<String> Anames = names.stream().filter(s -> s.startsWith("a")).collect(Collectors.toList());
 
-        List<Integer> val = map.values().stream().toList();
-        int Hi = val.stream().sorted().collect(Collectors.toList()).get(val.size()-1);
+        System.out.println(Anames);
 
-        for(Map.Entry<String,Integer> m: map.entrySet()){
-            if(m.getValue() == Hi){
-                System.out.println(m.getKey());
-            }
-        }
-//        Or
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
 
-        map.forEach((k,v) ->{if(v == Hi){
-            System.out.println(k);
-        }});
+        List<Integer> even = numbers.stream().filter(a -> a%2 == 0).collect(Collectors.toList());
 
-        for(Map.Entry<String,Integer> entry : map.entrySet()){
-            System.out.println("Key : "+ entry.getKey()+" , Value : "+entry.getValue());
-        }
-        System.out.println("Map Size : "+map.size());
+        System.out.println(even);
 
-        HashMap<String,Integer>copyMap = new HashMap<>(map);
-//        copyMap.clear();
+        Calculate cal = (int a, int b)-> {return  a+b;};
 
-        System.out.println("Copy map Values : "+copyMap.values());
+        System.out.println( cal.calculate(10 , 11));
+
+        PrintHer Intro = (n) -> {
+            System.out.println("My name is : "+n);
+        };
+
+        Intro.print("Darshan");
+
 
 
 

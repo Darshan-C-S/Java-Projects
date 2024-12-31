@@ -57,8 +57,20 @@ https://www.youtube.com/watch?v=NHrsLjhjmi4&list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbg
 ### Stack and heap memory :
 https://chatgpt.com/c/1c17944d-b928-4a05-a787-2988e2b8e2cf
 
-#### 1. Stack Memory : Stores method-specific values and references.
-#### 2. Heap Memory : Stores objects and instance variables.
+#### 1. Stack Memory : 
+Stores method-specific values and reference  .
+#### 2. Heap Memory : 
+Stores objects and instance variables.
+
+
+#### Interaction of Stack and Heap
+* When a method is called:
+
+The method's parameters and local variables are pushed onto the stack.
+If the method creates an object, the object is allocated on the heap.
+The reference to the object (not the object itself) is stored on the stack.
+
+
 If the value are stored in form of objects in heap memory if there are two variable 
 having same value not created in by new key word will be pointing to same memory
 location 
@@ -68,6 +80,13 @@ location
 
 ### Immutability and garbage collections chat GPT:
 https://chatgpt.com/c/41e7a6fb-a96f-44a5-8834-fbce54f496fa
+
+
+## Packages
+
+Packages in Java can be defined as the grouping of related types 
+of classes, interfaces, etc providing access to protection and 
+namespace management.
 
 
 ## Data Types 
@@ -105,8 +124,15 @@ in the String Constant Pool part of the heap.
 
 
 ## Multi threading and async :
-
 https://chatgpt.com/c/7b807b20-f477-4205-afc9-ab2ea6c11261
+
+### Thread Pool:
+A thread pool in Java is a collection of threads that are managed and used to perform tasks
+
+
+### To implement Async operations in spring :
+https://www.linkedin.com/feed/update/urn:li:activity:7274388346183856138?utm_source=share&utm_medium=member_desktop
+
 
 ### Asynchronous programming by CompletableFuture
 https://www.geeksforgeeks.org/completablefuture-in-java/
@@ -134,7 +160,22 @@ which means it does not return any result.
 with result value, which means it does not take any input parameters but it 
 returns result as output.
 
-## Fork and Join:
+## Executor Services:
+https://chatgpt.com/share/67629740-33f8-8004-a6fe-7f8bea0d7078
+
+The ExecutorService in Java provides a higher-level replacement for working directly with threads.
+It simplifies thread management by allowing developers to:
+
+* Submit tasks (Runnable or Callable) for execution.
+* Manage thread pooling.
+* Control the lifecycle of tasks and threads.
+
+
+### Future :
+A Future represents the result of an asynchronous computation.
+
+
+### Fork and Join
 https://chatgpt.com/c/66e2f6f6-214c-8004-b134-58e3539d9958
 
 
@@ -194,13 +235,29 @@ implementation to a class that extends it.
 
 You cannot create an instance of an abstract class in Java.
 
+### Interfaces 
+https://chatgpt.com/c/6762684b-7150-8004-a009-9f2ab55fbca4
+
+In Java, interfaces are a way to achieve abstraction and define a 
+contract that classes must follow. An interface is a collection of 
+abstract methods (methods without a body) and static constants. A 
+class that implements an interface agrees to provide implementations 
+for all the methods declared in the interface.
+
+### Virtual method in Java
+A virtual method in Java is a method in a base class that can be 
+overridden in its subclasses
+
+
+
 
 ## Generics
 https://www.geeksforgeeks.org/generics-in-java/
 
 ### Enums:
 
-An enum is a special "class" that represents a group of constants
+Enums. An enum is a special "class" that represents a group of 
+constants (unchangeable variables, like final variables).
 
 ### Maps and ArrayList:
 
@@ -283,14 +340,14 @@ Beans are stored inside a particular space in JVM (Java Virtual Machine). That
 particular space is known as the IOC Container.
 
 ### Profiles :
+They are the easy and clean way of configuring separate environments  
+
 While developing the application we deal with multiple environments such 
 as dev, QA, Prod, and each environment requires a different configuration. 
 For eg., we might be using an embedded H2 database for dev but for prod,
 we might have proprietary Oracle or DB2. Even if DBMS is the same across 
 the environment, the URLs will be different.
 
-To make this easy and clean, Spring has the provision of Profiles to keep
-the separate configuration of environments.
 
 
 ### Important annotations :
@@ -307,8 +364,11 @@ In Spring Boot, the @Configuration annotation is used to indicate that a class c
 requests for those beans at runtime
 
 #### 3. Path Variable (@PathVariable)
-Purpose: Used to bind a URI template variable to a method parameter.
+Purpose: Used to bind a URI template variable to a method parameter to uniquely identify the resources . 
 Use Case: When you need to capture values from the URI path, typically for identifying resources.
+
+1. Note : we can make path variable optional by making @PathVariable(required = false)
+
 
 #### 4. Request Parameter (@RequestParam)
 Purpose: Used to bind a query parameter from the URL to a method parameter.
@@ -324,6 +384,8 @@ The annotations @RequestBody and @ResponseBody in Spring were used to bind
 these HTTP requests and responses. In simple words, these are the annotations
 which converts JSON/XML to your Java object and your data to JSON/XML while sending
 and receiving to client.
+
+Note :we can make @RequestBody / @ResponseBody optional by @RequestBody/@ResponseBody(required = false)
 
 
 ### ResponseEntity< T > : 

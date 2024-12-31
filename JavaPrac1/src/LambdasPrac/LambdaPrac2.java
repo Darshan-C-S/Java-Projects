@@ -1,5 +1,8 @@
 package LambdasPrac;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class LambdaPrac2 {
 @FunctionalInterface
     interface lamdaCal1{
@@ -25,6 +28,16 @@ public class LambdaPrac2 {
 
         lambdaCal2 Add2No = (x,y) -> System.out.println("Addition operation on two no "+x+y);
         Add2No.multipleVarialbleOps(10,10);
+
+//        Comparitor implimentation
+
+
+        List<String> names = Arrays.asList("John", "Alice", "Bob", "Charlie");
+
+        System.out.println("Sort in reverse order list is : ");
+
+        names.sort((a , b) -> b.compareTo(a));
+        System.out.println(names);
 
 
 

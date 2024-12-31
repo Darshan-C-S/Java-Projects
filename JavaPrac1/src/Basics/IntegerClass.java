@@ -6,7 +6,7 @@ public class IntegerClass {
         int iv = ic.intValue();
         Integer is = Integer.valueOf("8866");
 
-        System.out.println("Integer Class value : "+ ic + " Integer Primitive value : "+ iv + " Integer value of string : "+ is);
+        System.out.println("Integer Class value : "+ ic + " Integer Primitive value : "+ iv + " Integer class value of string : "+ is);
 
         System.out.println("The compared to gives 1 if the original value is bigger , 0 for equal , -1 for smaller " +
                 ", the value is :  "+is.compareTo(is));
@@ -25,7 +25,7 @@ public class IntegerClass {
 
 
 
-        Integer a1 = Integer.valueOf("124");
+        Integer a1 = Integer.valueOf("123");
         Integer b = Integer.parseInt("123");
         int intVal = b.intValue();
         System.out.println(a1 == b);

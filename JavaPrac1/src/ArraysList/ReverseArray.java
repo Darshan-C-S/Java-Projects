@@ -10,14 +10,14 @@ public class ReverseArray {
 /* The Algorithm is applicable for all the data types */
     public static void revWithoutInbuilt(String[] arr){
         String [] b = new String[arr.length];
-        int j = arr.length;
+        int j = arr.length-1;
 
        /* Using Collection Frame work */
 //        Collections.reverse(Arrays.asList(arr));
 //        Arrays.stream(arr).forEach(System.out::println);
 
         for (int i = 0; i < arr.length; i++) {
-            b[j-1] = arr[i];
+            b[j] = arr[i];
             j-=1;
         }
         System.out.println("Reversed array is ");

@@ -1,15 +1,16 @@
 package DesignPattren.Singleton;
 
-public enum DemoEnum{
-    INSTANCE;
-    
-    private int num ;
 
-    public int getNum() {
-        return num;
+enum DemoEnum{
+    INSTANCE ;
+
+   private int value;
+
+    public int getValue() {
+        return value;
     }
 
-    public void setNum(int num) {
-        this.num = num;
+    public void setValue(int value) {
+        this.value = value;
     }
 }
