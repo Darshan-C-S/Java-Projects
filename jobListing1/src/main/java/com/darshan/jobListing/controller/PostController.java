@@ -50,12 +50,11 @@ public class PostController {
         return repo.save(post);
     }
 
-
     @PutMapping("/update")
     public Post UpdatePost(@RequestBody Post post){
         return repo.save(post);
     }
-
+//He
     @GetMapping("/GetPostprofile/{profile}")
     public List<Post> getPostprofile (@RequestParam String profile){
         return repo.findByProfile(profile);
