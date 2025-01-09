@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GraphQldemoApplication {
 
 //	https://chatgpt.com/c/67500fd7-9460-8004-9c2f-02ff918dc7a1
+//	Hello
 
 	public static void main(String[] args) {
 		SpringApplication.run(GraphQldemoApplication.class, args);
