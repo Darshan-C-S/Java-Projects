@@ -123,62 +123,6 @@ Constant Pool. String objects created without the use of new keyword are stored
 in the String Constant Pool part of the heap.
 
 
-## Multi threading and async :
-https://chatgpt.com/c/7b807b20-f477-4205-afc9-ab2ea6c11261
-
-### Thread Pool:
-A thread pool in Java is a collection of threads that are managed and used to perform tasks
-
-
-### To implement Async operations in spring :
-https://www.linkedin.com/feed/update/urn:li:activity:7274388346183856138?utm_source=share&utm_medium=member_desktop
-
-
-### Asynchronous programming by CompletableFuture
-https://www.geeksforgeeks.org/completablefuture-in-java/
-
-Asynchronous programming in Java is often achieved using 
-the CompletableFuture class introduced in Java 8. This 
-code is executed as non blocking call in a separate thread 
-and result is made available when its ready
-
-
-The CompletableFuture class does not block/wait for the completion of the task and 
-it can execute other tasks in parallel 
-
-Key Concepts:
-1. CompletableFuture: A class that represents a future result of an 
-asynchronous computation.
-2. CompletionStage: An interface that represents a stage of a 
-possibly asynchronous computation
-
-#### Note:
-
-1. RunAsync takes Runnable as input parameter and returns CompletableFuture, 
-which means it does not return any result.
-2. SuppyAsync takes Supplier as argument and returns the CompletableFuture 
-with result value, which means it does not take any input parameters but it 
-returns result as output.
-
-## Executor Services:
-https://chatgpt.com/share/67629740-33f8-8004-a6fe-7f8bea0d7078
-
-The ExecutorService in Java provides a higher-level replacement for working directly with threads.
-It simplifies thread management by allowing developers to:
-
-* Submit tasks (Runnable or Callable) for execution.
-* Manage thread pooling.
-* Control the lifecycle of tasks and threads.
-
-
-### Future :
-A Future represents the result of an asynchronous computation.
-
-
-### Fork and Join
-https://chatgpt.com/c/66e2f6f6-214c-8004-b134-58e3539d9958
-
-
 # DSA:
 Note :
 Any datastructures which uses hash table doesnt guarantee the order 
@@ -248,7 +192,10 @@ for all the methods declared in the interface.
 A virtual method in Java is a method in a base class that can be 
 overridden in its subclasses
 
+## Stream API
+https://medium.com/@asishpanda444/stream-api-coding-qna-8df8682b7e2a
 
+https://chatgpt.com/c/679cd693-b0f0-8004-87f7-10e91f536d1a
 
 
 ## Generics
@@ -279,6 +226,62 @@ https://www.youtube.com/watch?v=vx1C8EyTa7Y
 
 https://www.mongodb.com/developer/languages/java/java-aggregation-pipeline/
 
+
+
+## Multi threading and async :
+https://chatgpt.com/c/7b807b20-f477-4205-afc9-ab2ea6c11261
+
+### Thread Pool:
+A thread pool in Java is a collection of threads that are managed and used to perform tasks
+
+
+### To implement Async operations in spring :
+https://www.linkedin.com/feed/update/urn:li:activity:7274388346183856138?utm_source=share&utm_medium=member_desktop
+
+
+### Asynchronous programming by CompletableFuture
+https://www.geeksforgeeks.org/completablefuture-in-java/
+
+Asynchronous programming in Java is often achieved using
+the CompletableFuture class introduced in Java 8. This
+code is executed as non blocking call in a separate thread
+and result is made available when its ready
+
+
+The CompletableFuture class does not block/wait for the completion of the task and
+it can execute other tasks in parallel
+
+Key Concepts:
+1. CompletableFuture: A class that represents a future result of an
+   asynchronous computation.
+2. CompletionStage: An interface that represents a stage of a
+   possibly asynchronous computation
+
+#### Note:
+
+1. RunAsync takes Runnable as input parameter and returns CompletableFuture,
+   which means it does not return any result.
+2. SuppyAsync takes Supplier as argument and returns the CompletableFuture
+   with result value, which means it does not take any input parameters but it
+   returns result as output.
+
+## Executor Services:
+https://chatgpt.com/share/67629740-33f8-8004-a6fe-7f8bea0d7078
+
+The ExecutorService in Java provides a higher-level replacement for working directly with threads.
+It simplifies thread management by allowing developers to:
+
+* Submit tasks (Runnable or Callable) for execution.
+* Manage thread pooling.
+* Control the lifecycle of tasks and threads.
+
+
+### Future :
+A Future represents the result of an asynchronous computation.
+
+
+### Fork and Join
+https://chatgpt.com/c/66e2f6f6-214c-8004-b134-58e3539d9958
 
 
 
@@ -386,6 +389,20 @@ which converts JSON/XML to your Java object and your data to JSON/XML while send
 and receiving to client.
 
 Note :we can make @RequestBody / @ResponseBody optional by @RequestBody/@ResponseBody(required = false)
+
+
+#### 7. @Transactional
+The @Transactional annotation is used to mark a method or a class as 
+transactional, meaning that any database operations performed within
+the marked method or class will be executed within a transaction. 
+If the transaction is successful, the changes will be committed to
+the database.
+
+#### @Document and @Entity : 
+@Entity is used to map a class to a relational database, 
+it represents a database table. @Document is used to map
+a class to noSQL database (specifically mongoDB) 
+
 
 
 ### ResponseEntity< T > : 

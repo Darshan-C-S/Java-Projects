@@ -25,6 +25,8 @@ public class IntegerClass {
 
 
 
+        /*Integer.parseInt(String s): This method returns a primitive int data type.
+Integer.valueOf(String s): This method returns an Integer object,*/
         Integer a1 = Integer.valueOf("123");
         Integer b = Integer.parseInt("123");
         int intVal = b.intValue();

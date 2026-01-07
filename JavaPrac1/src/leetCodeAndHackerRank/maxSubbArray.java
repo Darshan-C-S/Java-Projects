@@ -40,10 +40,25 @@ update the max value to maxSum */
 
         return maxSum;
     }
+
+    public static int maxsubArr3(int[]nums){
+        int maxSum = 0;
+
+
+        for (int i = 0; i <nums.length ; i++) {
+            int current = 0;
+            for (int j = i; j < nums.length; j++) {
+                current = current + nums[j];
+                maxSum = Math.max(maxSum , current);
+            }
+        }
+        return maxSum;
+    }
     public static void main(String[] args) {
 
         int []a ={-2,1,-3,4,-1,2,1,-5,4};
         System.out.println(maxSubArray2(a));
+        System.out.println(maxsubArr3(a));
 
 
     }

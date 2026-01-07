@@ -56,6 +56,14 @@ public class streamOPS {
         //strNo.map(n->n*2).forEach(n -> System.out.println(n));
 
 
+        List<Integer> li = Arrays.asList(1,2,3,4,5,6,6,7);
+
+        int hs= li.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).get(0);
+        int ls = li.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()).get(li.size()-1);
+
+        System.out.println("Hs : "+hs +" Ls : " + ls);
+
+
 
 
     }

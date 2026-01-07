@@ -9,6 +9,11 @@ import java.util.List;
 
 @Repository
 public interface PostRepository extends MongoRepository<Post , String> {
+//Post: This is the type of the objects that the repository will be managing.
+//String: This represents the type of the ID of the objects that the repository will manage.
+// In this case, it's a String.
+
+
     @Query("{'profile': ?0}")
     List<Post> findByProfile(String profile);
 

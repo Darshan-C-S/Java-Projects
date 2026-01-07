@@ -25,7 +25,7 @@ public class StreamsBasics {
 //      Reducing the element
         Optional<String> concat = stli.stream().reduce((x,y)->x+y);
 
-//      Using for each to prin the elements
+//      Using for each to print the elements
         concat.stream().forEach(System.out::println);
 
 //      Distinct element
