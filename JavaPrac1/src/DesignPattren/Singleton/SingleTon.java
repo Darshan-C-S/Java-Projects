@@ -11,6 +11,11 @@ package DesignPattren.Singleton;
  To make singleton keep the constructor private
  Create the object with method example is getInstance
 
+ the thread safety of enums in Java comes from the JVM's
+ class loading guarantees and the immutable, static final nature of
+ enum instances, making them the best way to implement the
+ Singleton pattern safely and simply.
+
 
  */
 

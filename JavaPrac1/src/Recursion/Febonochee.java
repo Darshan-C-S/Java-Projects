@@ -2,12 +2,11 @@ package Recursion;
 
 public class Febonochee {
 
-    public static int feb(int count){
-        if(count==0) return 0;
-        if(count ==1 || count == 2) return 1;
-        return feb(count-2)+feb(count-1);
-
-    }
+public static int feb(int n){
+    if(n==0)return 0;
+    if(n==1 || n ==2) return 1;
+    return feb(n-1)+feb(n-2);
+}
     public static int feb2(int n){
         int a =0;
         int b = 1;
@@ -23,7 +22,7 @@ public class Febonochee {
 
         int n = 10;
         for (int i = 1; i < n; i++) {
-            System.out.println(feb(i));
+//            System.out.println(feb(i));
             System.out.println(feb2(i));
         }
 

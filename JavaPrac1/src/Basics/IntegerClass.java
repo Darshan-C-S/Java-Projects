@@ -23,15 +23,24 @@ public class IntegerClass {
         String binString = Integer.toBinaryString(a);
         System.out.println("BitCount of : " + a +" is : "+binrev+" and binary string is : "+ binString);
 
-
-
         /*Integer.parseInt(String s): This method returns a primitive int data type.
 Integer.valueOf(String s): This method returns an Integer object,*/
+
         Integer a1 = Integer.valueOf("123");
         Integer b = Integer.parseInt("123");
         int intVal = b.intValue();
         System.out.println(a1 == b);
         System.out.println(a1.compareTo(b));
+
+//        Binary values to integer
+
+        String binaryString = "10110";
+        int binInt = Integer.parseInt(binaryString,2);
+        System.out.println("The int value of binary 10110 : "+ binInt );
+
+        int div = 10/3;
+        System.out.println(div);
+
 
 
 

@@ -5,7 +5,7 @@ public class nthTermOfAP {
 
     public static int nthTermOfAP1(int a , int b , int n){
 
-        return (a + (n-1)*(b-a));
+        return (a+(n-1)*(b-a));
 
     }
     public static void main(String[] args) {

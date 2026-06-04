@@ -1,7 +1,12 @@
 # Java important Notes
 
-Java Topics :
-https://medium.com/javarevisited/25-topics-and-resources-to-crack-java-developer-interviews-in-2021-8fbfe317513
+## Java and spring boot Topics Must to Reed :
+1. https://medium.com/javarevisited/25-topics-and-resources-to-crack-java-developer-interviews-in-2021-8fbfe317513
+
+2. https://www.geeksforgeeks.org/java/java-interview-questions/
+
+3. https://www.geeksforgeeks.org/springboot/spring-boot-interview-questions-and-answers
+
 
 ![img_3.png](img_3.png)
 
@@ -38,7 +43,7 @@ The JRE is the run time environment on the top of the JVM which provides the
 files related java inbuilt methods/classes used by the code .
 
 #### JVM subsystems
-* Classloader: It is the subsystem of JVM that is used to load class files.
+* Classloader: It is the subsystem of JVM that is used to load class files to memory during the run time  .
 * Bytecode Verifier: Checks the code fragments for illegal code that can violate access rights to objects.
 * Interpreter: Read bytecode stream then execute the instructions.
 
@@ -130,6 +135,9 @@ of elements (Like Hashmap , Hashset)
 
 ## List and stream api :
 https://chatgpt.com/c/b3ab0735-283b-4e7d-bb63-3f5bee489801
+
+## Linked list : 
+https://chatgpt.com/c/6a1e6904-6b90-8322-b2f0-e6bf374f8c22
 
 ## Set :
 https://chatgpt.com/c/824f2182-19e9-4c25-9edc-9fb881e8942c
@@ -304,8 +312,9 @@ which allows us to focus more on building the logic
   2. Auto configuration
   3. Dependency Management  
   4. Embedded server
-  5. Reuses the Boiler plate codes 
-  6. Rapid Application Development 
+  5. Starter Dependency
+  6. Reuses the Boiler plate codes 
+  7. Rapid Application Development 
 
 ### Working of spring boot 
 Spring boot will start by scanning the starter dependency , it downloads the jars

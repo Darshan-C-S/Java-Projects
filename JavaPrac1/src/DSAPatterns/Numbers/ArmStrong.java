@@ -5,16 +5,16 @@ public class ArmStrong {
     * 153 is an Armstrong number, 1*1*1 + 5*5*5 + 3*3*3 = 153
     * */
 
-    public static boolean ArmstrongFind(int n){
-        String number = Integer.toString(n);
+    public static boolean ArmstrongFind(int n ){
+        String no = Integer.toString(n);
 
-        char[]ch = number.toCharArray();
-        int out = 0;
+        char [] ch = no.toCharArray();
+        int out =0;
 
-        for( char c : ch ){
-            out += (int)Math.pow(c-'0' , ch.length);
+        for(char c : ch){
+            out += (int) Math.pow(c-'0',ch.length);
         }
-        return n == out;
+        return n==out;
     }
 
     public static void main(String[] args) {

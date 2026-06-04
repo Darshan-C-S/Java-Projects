@@ -1,17 +1,15 @@
 package Recursion;
 
 public class Factorial {
-    public static int fact(int no){
-        if(no <= 2){
-            return no;
+    public static int fact(int n){
+        if (n<2){
+            return n;
         }
-        return no*fact(no-1);
-
-
+        return n*fact(n-1);
     }
 
     public static void main(String[] args) {
-        System.out.println(fact(3));
+        System.out.println(fact(5));
 
     }
 }

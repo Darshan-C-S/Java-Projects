@@ -122,23 +122,19 @@ private int size;
          System.out.println("List is empty");
          return;
      }
-     size --;
-//     Initially check if the head is null if so we print list is empty
-//     If we have single head node then we delete it by making it null
-    if(head.next == null){
-        head = null;
+    if(head.next== null){
+        head =null;
     }
 // Create two pointer nodes secondLastNode and lastNode pointing to head and head.next
 // travers both the pointer forward until getting lastNode.next == 0
 // lastNode.next == 0 means lastNode is having last value and secondLastNode.next is pointing to it
 //  make secondLastNode.next null which deletes the value of lastNode and make secondLastNode the new lastNode
-    Node LastNode = head.next;
-    Node secondLastNode = head;
-    while (LastNode.next != null){
-        LastNode = LastNode.next;
-        secondLastNode = secondLastNode.next;
+    Node temp = head;
+
+    while (temp.next.next != null){
+       temp = temp.next;
     }
-    secondLastNode.next = null;
+    temp.next = null;
 
 
  }
